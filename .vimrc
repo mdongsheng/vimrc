@@ -1,6 +1,7 @@
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
+" Author: mdongsheng at gmail.com
 " Last change:	2011 Apr 15
 "
 " To use it, copy it to
