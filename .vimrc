@@ -2,7 +2,7 @@
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
 " Author: mdongsheng at gmail.com
-" Last change:	2011 Apr 15
+" Last change:	2013 Argu 7
 "
 " To use it, copy it to
 "     for Unix and OS/2:  ~/.vimrc
