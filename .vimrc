@@ -7,12 +7,12 @@ filetype on
 filetype plugin indent on
 set nocompatible
 set backspace=indent,eol,start
-set autoindent		" always set autoindenting on
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
+set autoindent
+set history=50
+set ruler
+set showcmd
 set hlsearch
-set incsearch		" do incremental searching
+set incsearch
 set ruler
 set number
 set enc=utf-8
@@ -34,7 +34,6 @@ set nowrap
 set browsedir=buffer
 set selection=exclusive
 set selectmode=mouse,key
-autocmd CursorMoved * set number
 
 "NERDTree settings
 let NERDTreeShowBookmarks=1
@@ -56,6 +55,8 @@ map <leader>b :FufBuffer<CR>
 map <silient><leader>s :source ~/.vimrc<CR>
 map <silient><leader>e :e ~/.vimrc<CR>
 
+vmap '' :w !pbcopy<CR><CR>
+
 nnoremap <leader>cw :FufFileWithFullCwd<CR>
 nnoremap <F9> zf<CR>
 nnoremap <F10> za
@@ -65,12 +66,12 @@ inoremap <silent><C-H> <Left>
 inoremap <silent><C-L> <Right>
 inoremap <silent><C-J> <Down>
 inoremap <silent><C-K> <Up>
+inoremap <C-E> <C-X><C-E>
+inoremap <C-Y> <C-X><C-Y>
 
-"Config _vimrc auto referesh
+" .vimrc auto referesh
 autocmd! BufWritePost .vimrc source ~/.vimrc
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
-
-"autocmd VimEnter * NERDTree

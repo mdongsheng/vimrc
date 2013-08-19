@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/dongsheng/Repository/Product/automobile-management'
+let g:netrw_dirhist_2='/Users/dongsheng/Repository/Product/automobile-management/app'
+let g:netrw_dirhist_3='/Users/dongsheng/Repository/Product/automobile-management/app/controllers'
+let g:netrw_dirhist_4='/Users/dongsheng/sources/rails/opensource/moumentei-master'
+let g:netrw_dirhist_5='/Users/dongsheng/sources/rails/opensource/moumentei-master/app'
+let g:netrw_dirhist_6='/Users/dongsheng/sources/rails/opensource/moumentei-master/app/controllers'
+let g:netrw_dirhist_7='/Users/dongsheng/sources/rails/opensource/moumentei-master'
