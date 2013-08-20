@@ -3,13 +3,16 @@
 
 "我的配置
 syntax on
+
+set sw=4
+set ts=4
+set et
 filetype on
 filetype plugin indent on
 set nocompatible
 set backspace=indent,eol,start
 set autoindent
 set history=50
-set ruler
 set showcmd
 set hlsearch
 set incsearch
@@ -18,7 +21,7 @@ set number
 set enc=utf-8
 set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
-set tabstop=2
+set tabstop=8
 set cindent shiftwidth=2
 set autoindent shiftwidth=2
 set wildmode=list:full
@@ -27,7 +30,7 @@ set nobackup
 set noswapfile
 set showmatch
 set ignorecase
-set iskeyword+=_,$,%,#,
+"set iskeyword+=_,$,%,#,
 set report=0
 set mouse=a
 set nowrap
@@ -45,7 +48,7 @@ let NERDTreeMinimalUI=1
 
 "Ctrlp Settings
 let g:ctrlp_working_path_mode = 'ra'
-map <F8> :NERDTree<CR>
+map <F8> :NERDTreeToggle<CR>
 
 let mapleader = ","
 map <leader>F :FufFile<CR>
@@ -54,8 +57,6 @@ map <leader>g :FufTag<CR>
 map <leader>b :FufBuffer<CR>
 map <silient><leader>s :source ~/.vimrc<CR>
 map <silient><leader>e :e ~/.vimrc<CR>
-
-vmap '' :w !pbcopy<CR><CR>
 
 nnoremap <leader>cw :FufFileWithFullCwd<CR>
 nnoremap <F9> zf<CR>
@@ -75,3 +76,4 @@ autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
+autocmd FileType python setlocal et sta sw=4 sts=4
