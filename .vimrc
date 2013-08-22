@@ -9,6 +9,7 @@ set ts=4
 set et
 filetype on
 filetype plugin indent on
+set hidden
 set nocompatible
 set backspace=indent,eol,start
 set autoindent
@@ -21,7 +22,7 @@ set number
 set enc=utf-8
 set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
-set tabstop=8
+"set tabstop=8
 set cindent shiftwidth=2
 set autoindent shiftwidth=2
 set wildmode=list:full
@@ -67,8 +68,13 @@ inoremap <silent><C-H> <Left>
 inoremap <silent><C-L> <Right>
 inoremap <silent><C-J> <Down>
 inoremap <silent><C-K> <Up>
-inoremap <C-E> <C-X><C-E>
-inoremap <C-Y> <C-X><C-Y>
+inoremap <C-P> <C-X><C-E>
+inoremap <C-N> <C-X><C-Y>
+
+"自动添加python的encoding
+function! AddPyCodingLine()
+  call append(0, "# -*- coding: utf-8 -*-")
+endfunction
 
 " .vimrc auto referesh
 autocmd! BufWritePost .vimrc source ~/.vimrc
@@ -77,3 +83,5 @@ autocmd BufReadPost *
     \   exe "normal! g`\"" |
     \ endif
 autocmd FileType python setlocal et sta sw=4 sts=4
+autocmd FileType ruby setlocal et sta sw=2 sts=2
+au BufNewFile *.py exec ":call AddPyCodingLine()"
