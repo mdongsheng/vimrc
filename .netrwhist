@@ -1,3 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/dongsheng/Repository/Product/automobile-management'
+let g:netrw_dirhist_2='/Users/dongsheng/sources/opensource/c/DNSPod-dnspod-sr-3575221'
+let g:netrw_dirhist_3='/Users/dongsheng/sources/opensource/python/pyapns'
+let g:netrw_dirhist_4='/Users/dongsheng/Repository/Product/automobile-management'
+let g:netrw_dirhist_5='/Users/dongsheng/sources/rails/project/testcase'
+let g:netrw_dirhist_6='/Users/dongsheng/sources/rails/project/demo_app'
+let g:netrw_dirhist_7='/Users/dongsheng/Repository/Product/studynote'
+let g:netrw_dirhist_8='/Users/dongsheng'

@@ -1,6 +1,13 @@
 " author: mdongsheng@gmail.com
 " Date: 2013-08-09
 
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'kchmck/vim-coffee-script'
+
 "我的配置
 syntax on
 
@@ -10,7 +17,6 @@ set et
 filetype on
 filetype plugin indent on
 set hidden
-set nocompatible
 set backspace=indent,eol,start
 set autoindent
 set history=50
