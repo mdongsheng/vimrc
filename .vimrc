@@ -18,6 +18,21 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Lokaltog/vim-powerline'
+"Bundle 'bling/vim-airline'
+Bundle 'mileszs/ack.vim'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+"Bundle 'astashov/vim-ruby-debugger'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'mrhooray/vim-hybrid'
+Bundle 'tpope/vim-commentary'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'asins/vimcdoc'
 
 syntax on
 set sw=4
@@ -54,10 +69,19 @@ set nowrap
 set browsedir=buffer
 set selection=exclusive
 set selectmode=mouse,key
+set cursorline
+
+"powerline
+set laststatus=2
+set encoding=utf-8
+if has("gui_running")
+  set lines=999 columns=999
+endif
+
 if has("gui_running")
   colorscheme yytextmate
 else
-  colorscheme blackboard
+  colorscheme hybrid
 endif
 
 "EasyMotion
@@ -68,22 +92,35 @@ let NERDTreeShowBookmarks=1
 let NERDChrismasTree=1
 let NERDTreeWinPos="left"
 let NERDTreeMinimalUI=1
-"let NERDTreeDirArrows=0
+let NERDTreeQuitOnOpen=1
+let NERDTreeWinSize=30
+let NERDTreeDirArrows=1
 "let g:rubytest_cmd_spec = "rspec -fd %p"
 "let g:SuperTabRetainCompletionType="context"
 
+" Ack
+" let g:ack_default_options = "ignore-file=log"
+
+" taglist
+let Tlist_Ctags_Cmd = "/usr/local/Cellar/ctags/5.8_1/bin/ctags"
+
 "Ctrlp Settings
 let g:ctrlp_working_path_mode = 'ra'
-map <F8> :NERDTreeToggle<CR>
+map ,d :NERDTreeToggle<CR>
+nmap ,n :NERDTreeFind<CR>
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>k
 
 let mapleader = ","
 map <leader>F :FufFile<CR>
 map <leader>f :FufTaggedFile<CR>
 map <leader>g :FufTag<CR>
 map <leader>b :FufBuffer<CR>
-map <silient><leader>s :source ~/.vimrc<CR>
-map <silient><leader>e :e ~/.vimrc<CR>
+map <silent><leader>s :source ~/.vimrc<CR>
+map <silent><leader>e :e ~/.vimrc<CR>
+map <silent><leader>t :TlistToggle<CR>
 
+nmap ,w <C-W>w
 nnoremap <leader>cw :FufFileWithFullCwd<CR>
 nnoremap <F9> zf<CR>
 nnoremap <F10> za
